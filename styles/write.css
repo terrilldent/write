@@ -1,0 +1,255 @@
+/* ----------- Reset Styles --------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,form,label,input,textarea,p,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+a,a:active,a:focus,input,textarea{outline:none}
+td,th{vertical-align:top;text-align:left}
+img,iframe{ border:none}
+ol,ul{list-style:none}
+h1,h2,h3{font-size:100%;font-weight:normal}
+
+/* ----------- WIREFRAME --------- */
+
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('../../fonts/Lato-Light.ttf');
+    }
+body{
+    font-family: 'Lato-Light', Helvetica-Neue, Helvetica, Arial, Sans-serif;
+    }
+
+html,
+body,
+#app {
+    height: 100%;
+    overflow: hidden;
+    }
+
+/* --------------- HEADERS -------------- */
+
+h1 {
+    font-size: 2em;
+    margin: .5em 0;
+    }
+
+h2 {
+    font-size: 2em;
+    margin: .5em 0 .5em;
+    }
+
+h3 {
+    font-size: 1.3em;
+    margin: 1em 0 .5em;
+    }
+
+/* --------------- LOGIN -------------- */
+
+#login {
+    margin: 2em auto;
+    max-width: 20em;
+    padding: 20px;
+    background: #F00;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-transition: margin 300ms linear;
+    }
+    #login.success {
+        margin-top: -500px;
+        }
+
+.form-input {
+    padding: 6px 12px;
+    font-size: 1.3em;
+    width: 100%;
+    box-sizing: border-box;
+    margin: .5em 0;
+    border: none;
+    border-radius: 4px;
+    border-top: 2px solid #CCC;
+    }
+.form-button {
+    padding: 5px 16px;
+    font-size: 1.3em;
+    margin: .5em 0;
+    border-radius: 4px;
+    border-bottom: 2px solid #CCC;
+    background: #FFF;
+    display: inline-block;
+    cursor: pointer;
+    }
+#wait-time {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background: #000;
+    height: 3px;
+    }
+#wait-time.show {
+    width: 100%;
+    -webkit-transition: width 15000ms linear;
+    }
+
+/* --------------- WIREFRAME -------------- */
+
+#app-content {
+    z-index: 3;
+    position: absolute;
+    bottom: -100%;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    -webkit-transition: bottom 200ms linear;
+    }
+
+.loggedin #app-content {
+    bottom: 0;
+    }
+
+
+/* ------ HEADER AND TABS ------ */
+
+#header {
+    height: 1.8em;
+    padding: .3em;
+    background-color: #F00;
+    }
+#header h1 {
+    color: #FFF;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    }
+#files-column,
+#three-column ,
+.show-files #posts-column,
+.show-three #posts-column {
+    display:none;
+    }
+.show-files #files-column ,
+.show-three #three-column {
+    display:block;
+    }
+.tab-content {
+    position: absolute;
+    padding: 1em;
+    top: 2.3em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background: #FFF;
+    }
+
+
+/* ----- BUTTONS ------ */
+
+.button {
+    background-color: #FFF;
+    padding: .3em .5em; 
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 0 0 5px;
+    text-decoration: none;
+    color: #000;
+    }
+    .button.right {
+        float: right;
+        }
+    .button.left {
+        float: left;
+        }
+.circle-button {
+    border-radius: 30px;
+    width: 18px;
+    height: 18px;
+    margin: 2px;
+    text-align: center;
+    color: #FFF;
+    background: #444;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 18px;
+    }
+    .circle-button.delete {
+        font-size: .9em;
+        background-color: #F00;
+        font-weight: normal;
+        }
+
+/* ----- LIST ----- */
+
+#list,
+#editor,
+#preview {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    }
+#list {
+    width: 200px;
+    left: 0;
+    box-sizing: border-box;
+    border-right: 1px solid #CCC;
+    }
+    .post-row {
+        list-style-type: none;
+        padding: 4px 6px;
+        border-bottom: 1px solid #DDD;
+        }
+#editor {
+    left: 200px;
+    width: 400px;
+    border-right: 1px solid #CCC;
+    box-sizing: border-box;
+    }
+    #editor li{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+    #editor input,
+    #editor textarea{
+        margin: 0;
+        border: none;
+        border-bottom: 1px solid #EEE;
+        padding: 6px 8px; 
+        width: 100%;
+        box-sizing: border-box;
+        }
+    .title-input{
+        font-size: 1.3em;
+        font-family: 'Lato-Light';
+        }
+    .body-input{
+        height: 800px;
+        font-size: 0.8em;
+        line-height: 1.3em;
+        white-space: pre-wrap;
+        }
+#preview {
+    left: 600px;
+    right: 0;
+    box-sizing: border-box;
+    padding: 1em 1.5em;
+    }
+    #preview p{
+        margin-bottom: 1em;
+        }
+
+
+
+
+
+
+
+
+
+
+

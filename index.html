@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Write</title>
+    <link rel="stylesheet" href="styles/write.css" />
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <div id="app">
+        <div id="login">
+            <h2>Login</h2>
+            <input class="form-input" type="text"     name="user" id="user" autofocus/>
+            <input class="form-input" type="password" name="pass" id="pass"/>
+            <div class="form-button" id="login-submit">Login</div>
+            <div id="wait-time"></div>
+        </div>
+        <div id="app-content">
+            <div id="header">
+                <span id="refresh-button" class="button right">Refresh</span>
+                <span id="new-button" class="button right">New</span>
+                <span id="posts-button" class="button left">Posts</span>
+                <span id="files-button" class="button left">Files</span>
+                <h1>terrill.ca</h1>
+            </div>
+            <div id="post-column" class="tab-content">
+                <div id="list">
+                </div>
+                <div id="editor">
+                </div>
+                <div id="preview">
+                </div>
+            </div>
+            <div id="files-column" class="tab-content">
+            </div>
+            <div id="three-column" class="tab-content">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/sha256.js"></script>
+    <script type="text/javascript" src="js/spark.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/write.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
