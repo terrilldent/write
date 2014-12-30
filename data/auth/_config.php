@@ -5,6 +5,7 @@
 $HOST = "";
 $USER = "";
 $PASS = "";
+$DBNAME = "";
 
 
 /* 

@@ -50,7 +50,8 @@ function outputPostHTML( $assocResult, $includeLink )
     	echo( "</a>" );
     }
     echo( "</h2>" );
-    echo( "<p class='date'>" . $assocResult["date"] . "</p>" );
+    echo( "<p class='date'>" . date("F jS, Y", strtotime( $assocResult["date"] ) ) . "</p>" );
+
     echo( $assocResult["body"] );
     echo( "</div>" );
 }

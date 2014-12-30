@@ -3,9 +3,9 @@ include_once("config.php");
 
 function connectToDB()
 {
-    global $HOST, $USER, $PASS;
+    global $HOST, $USER, $PASS, $DBNAME;
     $link = mysql_connect( $HOST, $USER, $PASS );
-    mysql_select_db( 'comments' ) or die( "Unable to select database");
+    mysql_select_db( $DBNAME ) or die( "Unable to select database");
     
     return $link;
 }

@@ -41,6 +41,11 @@ h3 {
     margin: 1em 0 .5em;
     }
 
+.illustration-full{
+    width: 100%;
+    max-width: 500px;
+    }
+
 /* --------------- LOGIN -------------- */
 
 #login {
@@ -148,12 +153,13 @@ h3 {
 
 .button {
     background-color: #FFF;
-    padding: .3em .5em; 
-    border-radius: 4px;
+    padding: .2em .5em .3em;
     cursor: pointer;
     margin: 0 0 0 5px;
     text-decoration: none;
     color: #000;
+    border-radius: 4px;
+    border-bottom: 1px solid #700;
     }
     .button.right {
         float: right;
